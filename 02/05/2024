@@ -1,0 +1,108 @@
+CREATE TABLE direcao(
+    cpf bigint PRIMARY KEY NOT NULL,
+    nome varChar(45),
+    cargo char,
+    email char,
+    fone bigint(11)
+);
+
+INSERT INTO direcao(
+    cpf,nome,cargo,email,fone
+)VALUES
+    ('186.000.170-09','Chris','diretor','Chrisbang08@gmail.com','(65) 99717-4883'),
+     ('567.713.140-73','Lia','secretaria','liachen02@gmail.com','(32) 97341-2526';
+
+
+CREATE TABLE aluno(
+    id int PRIMARY KEY,
+    nome varChar(45),
+    turma varChar(1),
+    curso varChar(50),
+    fone bigint(11)
+
+    INSERT INTO aluno(
+    id,nome,turma,curso,fone
+)VALUES
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
+     ('07777600748','jackson','B','eletrica','(95) 99347-3828');
+
+
+    CREATE TABLE cursoTecnico(
+    id int AUTO_INCREMENT primary key ,
+    nome varChar(45),
+    material varChar,
+    cargaHoraria int,
+   quanMaterial int
+
+        INSERT INTO cursoTecnico(
+    id,nome,material,cargaHoraria,quanMaterial
+)VALUES
+    ('51972948652','eletrica','','enfermagem','(42) 97257-9641'),','jake','A','enfermagem','(42) 97257-9641'),
+     ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+
+    CREATE TABLE administracao(
+    cpf bigint PRIMARY KEY NOT NULL,
+    nome varChar(50),
+    idCargo int,
+    cargo varChar (30),
+    fone varChar(11)]
+
+        INSERT INTO administracao(
+    cpf,nome,idCargo,cargo,fone
+)VALUES
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+
+
+    CREATE TABLE laboratorio(
+    id int AUTO_INCREMENT primary key ,
+    material varChar,
+    utensilios varChar
+    nome varChar,
+    requisitos varChar(255)
+
+        INSERT INTO laboratorio(
+    id,material,utensilios,nome,requisitos
+)VALUES
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+
+
+    CREATE TABLE instrutor(
+    id int AUTO_INCREMENT primary key ,
+    nome varChar(50),
+    cargaHoraria int,
+    email char,
+    certificado varChar(255)
+
+        INSERT INTO instrutor(
+    id,nome,cargaHoraria,email,certificado
+)VALUES
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+
+    CREATE TABLE estoque(
+    lote int PRIMARY KEY,
+    idDosItens int,
+    qtdEstoque int,
+    dtDeValidade date,
+    preco decimal
+
+        INSERT INTO estoque(
+    lote,idDosItens,qtdEstoque,dtDeValidade,preco
+)VALUES
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
+     ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+
+    CREATE TABLE cozinha(
+    codProduto varChar(20) PRIMARY KEY,
+    dtDeValidade date,
+    quanConsumo int,
+    ingrediente varChar(20),
+   
+
+        INSERT INTO cozinha(
+    codProduto,dtDeValidade,quanConsumo,ingrediente
+)VALUES
+   ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
+    ('51972948652','jake','A','enfermagem','(42) 97257-9641');
