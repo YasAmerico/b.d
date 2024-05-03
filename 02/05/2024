@@ -23,8 +23,8 @@ CREATE TABLE aluno(
     INSERT INTO aluno(
     id,nome,turma,curso,fone
 )VALUES
-    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
-     ('07777600748','jackson','B','eletrica','(95) 99347-3828');
+    ('51972948652','Jake','A','enfermagem','(42) 97257-9641'),
+     ('07777600748','Jackson','B','eletrica','(95) 99347-3828');
 
 
     CREATE TABLE cursoTecnico(
@@ -37,8 +37,8 @@ CREATE TABLE aluno(
         INSERT INTO cursoTecnico(
     id,nome,material,cargaHoraria,quanMaterial
 )VALUES
-    ('51972948652','eletrica','','enfermagem','(42) 97257-9641'),','jake','A','enfermagem','(42) 97257-9641'),
-     ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+    ('82673796113','enfermagem','luva_jaleco','20','60_30'),
+     ('07184612346','eletrica','protetor','20''30');
 
     CREATE TABLE administracao(
     cpf bigint PRIMARY KEY NOT NULL,
@@ -50,8 +50,8 @@ CREATE TABLE aluno(
         INSERT INTO administracao(
     cpf,nome,idCargo,cargo,fone
 )VALUES
-    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
-    ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+    ('127.711.560-59','Lisa','49155563523','gerente','(42) 97257-9641'),
+    ('642.261.560-48','Rose','38826251339','coodenador','(42) 97257-9641');
 
 
     CREATE TABLE laboratorio(
@@ -64,8 +64,8 @@ CREATE TABLE aluno(
         INSERT INTO laboratorio(
     id,material,utensilios,nome,requisitos
 )VALUES
-    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
-    ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+    ('92440389133','luva_jaleco','bancada','enfermagem','usar_equipamentos_de_segurança'),
+    ('30292239728','protetor','bancada','eletrica','(usar_proteção_ocular');
 
 
     CREATE TABLE instrutor(
@@ -78,8 +78,8 @@ CREATE TABLE aluno(
         INSERT INTO instrutor(
     id,nome,cargaHoraria,email,certificado
 )VALUES
-    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
-    ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+    ('98810046657','Sam','20','sammy0202@gmail.com','formado_em_enfermagem'),
+    ('79564992747','Jack','20','jacckk0406@gmail.com','formado_em_engenharia_eletrica');
 
     CREATE TABLE estoque(
     lote int PRIMARY KEY,
@@ -91,8 +91,8 @@ CREATE TABLE aluno(
         INSERT INTO estoque(
     lote,idDosItens,qtdEstoque,dtDeValidade,preco
 )VALUES
-    ('51972948652','jake','A','enfermagem','(42) 97257-9641'),
-     ('51972948652','jake','A','enfermagem','(42) 97257-9641');
+    ('16291402','K2zWHVFCkaP','30_40','2024-12-22','22,45'),
+     ('93790579','jake','A','enfermagem','(42) 97257-9641');
 
     CREATE TABLE cozinha(
     codProduto varChar(20) PRIMARY KEY,
