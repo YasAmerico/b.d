@@ -1,109 +1,130 @@
 CREATE TABLE direcao(
     cpf bigint PRIMARY KEY NOT NULL,
     nome varChar(45),
-    cargo char,
-    email char,
+    cargo varChar(45),
+    email varChar(128),
     fone bigint(11)
 );
 
 INSERT INTO direcao(
     cpf,nome,cargo,email,fone
 )VALUES
-    ('186.000.170-09','Chris','diretor','Chrisbang08@gmail.com','(65) 99717-4883'),
-     ('567.713.140-73','Lia','secretaria','liachen02@gmail.com','(32) 97341-2526';
-
+    (18600017009,'Chris','diretor','Chrisbang08@gmail.com',65997174883),
+     (56771314073,'Lia','secretaria','liachen02@gmail.com',32973412526);
 
 CREATE TABLE aluno(
-    id int PRIMARY KEY,
+    id bigint(45) PRIMARY KEY,
     nome varChar(45),
     turma varChar(1),
     curso varChar(50),
     fone bigint(11)
-
-    INSERT INTO aluno(
+);
+   
+INSERT INTO aluno(
     id,nome,turma,curso,fone
 )VALUES
-    ('51972948652','Jake','A','enfermagem','(42) 97257-9641'),
-     ('07777600748','Jackson','B','eletrica','(95) 99347-3828');
+    (51972948652,'Jake','A','enfermagem',42972579641),
+     (07777600748,'Jackson','B','eletrica',95993473828);
 
 
     CREATE TABLE cursoTecnico(
-    id int AUTO_INCREMENT primary key ,
+    id bigint(45) AUTO_INCREMENT primary key ,
     nome varChar(45),
-    material varChar,
-    cargaHoraria int,
-   quanMaterial int
-
-        INSERT INTO cursoTecnico(
+    material varChar(128),
+    cargaHoraria int(3),
+   quanMaterial int(3)
+);
+  
+INSERT INTO cursoTecnico(
     id,nome,material,cargaHoraria,quanMaterial
 )VALUES
-    ('82673796113','enfermagem','luva_jaleco','20','60_30'),
-     ('07184612346','eletrica','protetor','20''30');
+    (82673796113,'enfermagem','luva',20,60),
+     (07184612346,'eletrica','protetor',20,30);
 
     CREATE TABLE administracao(
-    cpf bigint PRIMARY KEY NOT NULL,
+    cpf bigint (11) PRIMARY KEY NOT NULL,
     nome varChar(50),
-    idCargo int,
+    idCargo bigint(45),
     cargo varChar (30),
-    fone varChar(11)]
-
-        INSERT INTO administracao(
+    fone varChar(11)
+);
+     
+INSERT INTO administracao(
     cpf,nome,idCargo,cargo,fone
 )VALUES
-    ('127.711.560-59','Lisa','49155563523','gerente','(42) 97257-9641'),
-    ('642.261.560-48','Rose','38826251339','coodenador','(42) 97257-9641');
+    (12771156059,'Lisa',49155563523,'gerente',42972579641),
+    (64226156048,'Rose',38826251339,'coodenador',42972579641);
 
 
     CREATE TABLE laboratorio(
-    id int AUTO_INCREMENT primary key ,
-    material varChar,
-    utensilios varChar
-    nome varChar,
+    id bigint(45) AUTO_INCREMENT primary key ,
+    material varChar(45),
+    utensilios varChar(50),
+    nome varChar(45),
     requisitos varChar(255)
+    );
 
         INSERT INTO laboratorio(
     id,material,utensilios,nome,requisitos
 )VALUES
-    ('92440389133','luva_jaleco','bancada','enfermagem','usar_equipamentos_de_segurança'),
-    ('30292239728','protetor','bancada','eletrica','(usar_proteção_ocular');
+    (92440389133,'jaleco','bancada','enfermagem','usar_equipamentos_de_segurança'),
+    (30292239728,'protetor','bancada','eletrica','(usar_proteção_ocular');
 
 
     CREATE TABLE instrutor(
-    id int AUTO_INCREMENT primary key ,
+    id bigint(45) AUTO_INCREMENT primary key ,
     nome varChar(50),
-    cargaHoraria int,
-    email char,
+    cargaHoraria int(2),
+    email varChar(128),
     certificado varChar(255)
+    );
 
         INSERT INTO instrutor(
     id,nome,cargaHoraria,email,certificado
 )VALUES
-    ('98810046657','Sam','20','sammy0202@gmail.com','formado_em_enfermagem'),
-    ('79564992747','Jack','20','jacckk0406@gmail.com','formado_em_engenharia_eletrica');
+    (98810046657,'Sam',20,'sammy0202@gmail.com','formado_em_enfermagem'),
+    (79564992742,'Jack',20,'jacckk0406@gmail.com','formado_em_engenharia_eletrica');
 
     CREATE TABLE estoque(
-    lote int PRIMARY KEY,
-    idDosItens int,
-    qtdEstoque int,
+    lote bigint(40) PRIMARY KEY,
+    idDosItens varChar(45),
+    qtdEstoque int(3),
     dtDeValidade date,
     preco decimal
-
+);
+        
         INSERT INTO estoque(
     lote,idDosItens,qtdEstoque,dtDeValidade,preco
 )VALUES
-    ('16291402','K2zWHVFCkaP','30_40','2024-12-22','22,45'),
-     ('93790579','sJn9k5eITIB','20_30','2025-03-25','25,90');
+    (16291402,'03GJjtCdgvG',40,'2024-12-22',22.45),
+     (93790579,'sJn9k5eITIB',20,'2025-03-25',25.90);
 
     CREATE TABLE cozinha(
-    codProduto varChar(20) PRIMARY KEY,
+    codProduto bigint(20) PRIMARY KEY,
     dtDeValidade date,
     quanConsumo int,
-    ingrediente varChar(20),
+    ingrediente varChar(20)
+    );
    
 
         INSERT INTO cozinha(
     codProduto,dtDeValidade,quanConsumo,ingrediente
 )VALUES
-   ('60768560','2024-07-14','30_40','arroz_batata_carne'),
-    ('34708401','2024-09-13','20_25','macarrao_frango');
+   (60768560,'2024-07-14',40,'arroz_batata_carne'),
+    (34708401,'2024-09-13',20,'macarrao_frango');
 
+SELECT * FROM direcao;
+
+SELECT * FROM aluno;
+
+SELECT * FROM cursoTecnico;
+
+SELECT * FROM administracao;
+
+SELECT * FROM laboratorio;
+
+SELECT * FROM instrutor;
+
+SELECT * FROM estoque;
+
+SELECT * FROM cozinha;
