@@ -128,3 +128,9 @@ SELECT * FROM instrutor;
 SELECT * FROM estoque;
 
 SELECT * FROM cozinha;
+
+ALTER TABLE direcao
+add column id bigint(45);
+
+SELECT * FROM direcao;
+#esse comando é utilizado para adicionar uma nova coluna na tabela
