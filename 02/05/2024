@@ -140,3 +140,31 @@ drop column cargo;
 
 SELECT * FROM direcao;
 #esse comando exclui uma coluna da tabela
+
+ALTER TABLE direcao
+MODIFY column cpf bigint (22);
+
+SELECT * FROM direcao;
+#modificar o tipo da coluna da tabela
+
+DESC direcao;
+#descreve os tipos das colunas 
+
+
+ALTER TABLE direcao
+add column id bigint(20) AFTER cpf;
+
+SELECT * FROM direcao;
+#colocar a coluna aonde quiser
+
+
+ALTER TABLE direcao
+add column id bigint(20) FIRST;
+
+SELECT * FROM direcao;
+#colocar a nova coluna por primeiro
+
+ALTER TABLE direcao
+CHANGE nome nome_completo varChar(50);
+SELECT * FROM direcao;
+#muda o nome da coluna 
