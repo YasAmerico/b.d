@@ -134,3 +134,9 @@ add column id bigint(45);
 
 SELECT * FROM direcao;
 #esse comando é utilizado para adicionar uma nova coluna na tabela
+
+ALTER TABLE direcao
+drop column cargo;
+
+SELECT * FROM direcao;
+#esse comando exclui uma coluna da tabela
