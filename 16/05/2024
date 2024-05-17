@@ -1,0 +1,30 @@
+CREATE TABLE professor (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  nome varchar(50) ,
+  curso varchar(50),
+  data_de_nascimento date ,
+  formacao varchar(250)
+  );
+
+  CREATE TABLE aluno (
+  id int(11) AUTO_INCREMENT PRIMARY KEY,
+  nome varchar(50) ,
+  matricula int(11),
+  curso varchar(50),
+  data_de_nascimento date
+ );
+
+ CREATE TABLE curso (
+  id int(11) AUTO_INCREMENT PRIMARY KEY,
+  nome_curso varchar(50) ,
+  id_aluno int(11) ,
+  id_professor int(11)
+  FOREIGN KEY (id_aluno) REFERENCES aluno(id),
+FOREIGN KEY (id_professor) REFERENCES professor(id)
+     );
+
+     SELECT * FROM professor;
+
+     SELECT * FROM aluno;
+
+     SELECT * FROM curso;
